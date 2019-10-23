@@ -2,7 +2,7 @@
 
 import pyserial
 
-## class MessungRead implements SerialPortEventListener {
+class MessungRead: #implements SerialPortEventListener 
 ##   private InputStream inputStream;
 ##   private BufferedReader bufferedReader;
 ##   private SerialPort serialPort;
@@ -14,13 +14,14 @@ import pyserial
 ##   private OutputStream messungTextOutputStream;
 ##   private Vector listeners;
 ##   
-##   private class MessuangReadThread extends Thread {
+	class MessuangReadThread: # extends Thread {
 ##     public static final int PAUSE = 1;
 ##     public static final int WAITING = 2;
 ##     public static final int NOTIFY = 3;
 ##     private boolean read;
 ##     
-##     public MessungReadThread(int waitTime, MessungRead parent) {
+		def MessungReadThread(waitTime, parent):
+			None
 ##       this.read = false;
 ## 
 ##       
@@ -36,9 +37,13 @@ import pyserial
 ##       this; setPriority(1);
 ##       start();
 ##     }
-##     private int waitTime; private MessungRead parent; private boolean running; private int status;
+##     private int waitTime; 
+##	 private MessungRead parent; 
+##	 private boolean running;
+##	 private int status;
 ##     
-##     public void run() {
+		def run():
+			None
 ##       while (this.running) {
 ##         
 ##         switch (this.status) {
@@ -84,12 +89,14 @@ import pyserial
 ## 
 ## 
 ##     
-##     public void end() { this.running = false; }
+		def end():
+			None #{ this.running = false; }
 ## 
 ## 
 ## 
 ##     
-##     public void setRead() { this.read = true; }
+		def setRead():
+			None #{ this.read = true; }
 ##   }
 ## 
 ## 
@@ -113,7 +120,7 @@ import pyserial
 ## 
 ## 
 ##   
-##   public static void main(String[] args) {
+		def main(String[] args) {
 ##     String defaultPort = "COM4";
 ## 
 ##     
